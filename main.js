@@ -58,7 +58,13 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 
-// the receiver function for ipc message
+// the ipc receiver function for synchronous renderer message
 ipc.on('synchronous-message', function (event, arg) { 
     event.returnValue = 'I heard you!'
+})
+
+// the ipc receiver function for asynchronous renderer message
+// ****Must use he event.sender.send  of event object to reply***
+ipc.on('asynchronous-message', function (event, arg) {
+    event.sender.send('asynchronous-reply', ', one giant leap for mankind.')
 })
