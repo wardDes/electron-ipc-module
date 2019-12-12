@@ -1,0 +1,19 @@
+{
+  "name": "electron-ipc-module",
+  "version": "1.0.0",
+  "description": "learn interprocess communication in electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "ipcMain",
+    "ipcRenderer"
+  ],
+  "author": "Daniel Howard",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^7.1.4"
+  }
+}
