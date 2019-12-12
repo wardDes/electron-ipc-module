@@ -2,6 +2,9 @@ const electron = require('electron')
 
 const { app, BrowserWindow } = require('electron')
 
+// need for ipc communication from renderer process
+const ipc = electron.ipcMain
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
@@ -54,3 +57,8 @@ app.on('activate', () => {
 })
 
 // In this file you can include the rest of your app's specific main process
+
+// the receiver function for ipc message
+ipc.on('synchronous-message', function (event, arg) { 
+    event.returnValue = 'I heard you!'
+})
