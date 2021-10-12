@@ -14,6 +14,6 @@
   "author": "Daniel Howard",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.1.4"
+    "electron": "^11.5.0"
   }
 }
